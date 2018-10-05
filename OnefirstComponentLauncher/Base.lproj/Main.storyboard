@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W3q-xw-Wtc"/>
+                        <viewControllerLayoutGuide type="bottom" id="RD6-Ac-44G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksB-xF-4gM">
+                                <rect key="frame" x="0.0" y="140.5" width="375" height="386"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://nokeyonepass.cafe24.com:8080/noKey/" borderStyle="roundedRect" placeholder="연결할 기본 URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sJA-2Z-kOq">
+                                        <rect key="frame" x="16" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="lyj-BS-0of"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="01026222225" borderStyle="roundedRect" placeholder="휴대폰 번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJx-GX-SNd">
+                                        <rect key="frame" x="16" y="50" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="GAr-jT-nUz"/>
+                                        </connections>
+                                    </textField>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnG-5F-oBj" customClass="OFPickerView">
+                                        <rect key="frame" x="35.5" y="130" width="304" height="216"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Em6-RD-7aQ">
+                                        <rect key="frame" x="35.5" y="356" width="152" height="30"/>
+                                        <state key="normal" title="장치스캔"/>
+                                        <connections>
+                                            <action selector="actionScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0BC-Hl-ahB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzV-Yz-XQx">
+                                        <rect key="frame" x="195.5" y="356" width="152" height="30"/>
+                                        <state key="normal" title="문열기"/>
+                                        <connections>
+                                            <action selector="actionOpenDoor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UCd-ta-Ku7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zzV-Yz-XQx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Em6-RD-7aQ" secondAttribute="trailing" symbolic="YES" id="79P-DP-t2O"/>
+                                    <constraint firstAttribute="trailing" secondItem="sJA-2Z-kOq" secondAttribute="trailing" constant="16" id="80y-eu-zKG"/>
+                                    <constraint firstAttribute="trailing" secondItem="zzV-Yz-XQx" secondAttribute="trailing" constant="27.5" id="Bet-A2-G7I"/>
+                                    <constraint firstItem="cnG-5F-oBj" firstAttribute="top" secondItem="OJx-GX-SNd" secondAttribute="bottom" constant="50" id="ECV-7f-soE"/>
+                                    <constraint firstItem="Em6-RD-7aQ" firstAttribute="leading" secondItem="cnG-5F-oBj" secondAttribute="leading" id="Fwm-ho-9f4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Em6-RD-7aQ" secondAttribute="bottom" id="HoM-Jq-pTp"/>
+                                    <constraint firstItem="Em6-RD-7aQ" firstAttribute="top" secondItem="cnG-5F-oBj" secondAttribute="bottom" constant="10" id="PsK-9Z-Kj1"/>
+                                    <constraint firstItem="cnG-5F-oBj" firstAttribute="centerX" secondItem="OJx-GX-SNd" secondAttribute="centerX" id="XUK-ZD-qst"/>
+                                    <constraint firstItem="sJA-2Z-kOq" firstAttribute="top" secondItem="ksB-xF-4gM" secondAttribute="top" id="a8O-pl-t0O"/>
+                                    <constraint firstItem="OJx-GX-SNd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sJA-2Z-kOq" secondAttribute="leading" id="cQ2-NM-Ubf"/>
+                                    <constraint firstItem="OJx-GX-SNd" firstAttribute="top" secondItem="sJA-2Z-kOq" secondAttribute="bottom" constant="20" id="d8V-zX-EAx"/>
+                                    <constraint firstItem="sJA-2Z-kOq" firstAttribute="leading" secondItem="ksB-xF-4gM" secondAttribute="leading" constant="16" id="dii-QH-aSw"/>
+                                    <constraint firstItem="zzV-Yz-XQx" firstAttribute="top" secondItem="Em6-RD-7aQ" secondAttribute="top" id="eB4-qu-MN6"/>
+                                    <constraint firstItem="Em6-RD-7aQ" firstAttribute="width" secondItem="cnG-5F-oBj" secondAttribute="width" multiplier="0.5" id="f3i-D9-GBi"/>
+                                    <constraint firstItem="OJx-GX-SNd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sJA-2Z-kOq" secondAttribute="trailing" id="yo6-6t-pDZ"/>
+                                    <constraint firstItem="zzV-Yz-XQx" firstAttribute="width" secondItem="Em6-RD-7aQ" secondAttribute="width" id="zNQ-Mu-2Mg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ksB-xF-4gM" secondAttribute="trailing" id="5QS-21-oNe"/>
+                            <constraint firstItem="ksB-xF-4gM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SP2-wN-Lb3"/>
+                            <constraint firstItem="ksB-xF-4gM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WoI-Z2-E6z"/>
+                            <constraint firstItem="ksB-xF-4gM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wXM-cA-wiA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputBaseUrl" destination="sJA-2Z-kOq" id="xFg-uL-QpD"/>
+                        <outlet property="inputPhoneNumber" destination="OJx-GX-SNd" id="rFx-AT-TWN"/>
+                        <outlet property="pickerView" destination="cnG-5F-oBj" id="FWk-dH-0w6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
