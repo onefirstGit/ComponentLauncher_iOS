@@ -13,7 +13,7 @@
 		006FB0F22166302E00D253CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006FB0F12166302E00D253CE /* Assets.xcassets */; };
 		006FB0F52166302E00D253CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006FB0F32166302E00D253CE /* LaunchScreen.storyboard */; };
 		006FB0F82166302E00D253CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 006FB0F72166302E00D253CE /* main.m */; };
-		006FB17721664C2300D253CE /* libOnefirstComponentLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 006FB17521664C2300D253CE /* libOnefirstComponentLib.a */; };
+		6AE140A52280029E0092E6BC /* libOnefirstComponentLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE140A42280029E0092E6BC /* libOnefirstComponentLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		006FB0F42166302E00D253CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		006FB0F62166302E00D253CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		006FB0F72166302E00D253CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		006FB17521664C2300D253CE /* libOnefirstComponentLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOnefirstComponentLib.a; sourceTree = "<group>"; };
 		006FB17621664C2300D253CE /* OFPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFPickerView.h; sourceTree = "<group>"; };
 		006FB17921664CFB00D253CE /* OFDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OFDataModel.h; sourceTree = "<group>"; };
+		6AE140A42280029E0092E6BC /* libOnefirstComponentLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOnefirstComponentLib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				006FB17721664C2300D253CE /* libOnefirstComponentLib.a in Frameworks */,
+				6AE140A52280029E0092E6BC /* libOnefirstComponentLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 		006FB17421664BFD00D253CE /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				006FB17521664C2300D253CE /* libOnefirstComponentLib.a */,
+				6AE140A42280029E0092E6BC /* libOnefirstComponentLib.a */,
 				006FB17621664C2300D253CE /* OFPickerView.h */,
 				006FB17921664CFB00D253CE /* OFDataModel.h */,
 			);
