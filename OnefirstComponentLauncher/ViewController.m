@@ -11,7 +11,6 @@
 
 @interface ViewController () <UITextFieldDelegate, OFPickerViewDelegate>
 
-@property (nonatomic, weak) IBOutlet UITextField *inputBaseUrl;
 @property (nonatomic, weak) IBOutlet UITextField *inputPhoneNumber;
 @property (nonatomic, weak) IBOutlet OFPickerView *pickerView;
 
@@ -21,9 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.pickerView setup];
-    self.pickerView.pickerViewDelegate = self;
 }
 
 #pragma mark - UITextFieldDelegate
@@ -35,20 +31,29 @@
 
 #pragma mark - OfPickerViewDelegate
 
-- (void)onScanFailedWithMessage:(NSString *)message {
+- (void)successWithMessage:(NSString *)message {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:action];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)failureWithMessage:(NSString *)message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:action];
+    
     [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - IBAction
 
 - (IBAction)actionScan:(id)sender {
-    NSString *url = self.inputBaseUrl.text;
-    NSString *phone = self.inputPhoneNumber.text;
-    OFDataModel *dataModel = [OFDataModel createModelWithHttpBaseUrl:url userPhoneNumber:phone];
-    self.pickerView.dataModel = dataModel;
+    NSString *phoneNumber = self.inputPhoneNumber.text;
     
-    [self.pickerView startScanDevice];
+    self.pickerView.pickerViewDelegate = self;
+    [self.pickerView loadDoorListWithPhoneNumber:phoneNumber];
 }
 
 - (IBAction)actionOpenDoor:(id)sender {

@@ -28,7 +28,6 @@
 		006FB0F62166302E00D253CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		006FB0F72166302E00D253CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		006FB17621664C2300D253CE /* OFPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFPickerView.h; sourceTree = "<group>"; };
-		006FB17921664CFB00D253CE /* OFDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OFDataModel.h; sourceTree = "<group>"; };
 		6AE140A42280029E0092E6BC /* libOnefirstComponentLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOnefirstComponentLib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +81,6 @@
 			children = (
 				6AE140A42280029E0092E6BC /* libOnefirstComponentLib.a */,
 				006FB17621664C2300D253CE /* OFPickerView.h */,
-				006FB17921664CFB00D253CE /* OFDataModel.h */,
 			);
 			path = Lib;
 			sourceTree = "<group>";

@@ -7,24 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OFDataModel.h"
 
 @protocol OFPickerViewDelegate <NSObject>
 
-- (void)onScanFailedWithMessage:(NSString *)message;
+- (void)successWithMessage:(NSString *)message;
+- (void)failureWithMessage:(NSString *)message;
 
 @end
 
 @interface OFPickerView : UIPickerView
 
 @property (nonatomic, weak) id<OFPickerViewDelegate> pickerViewDelegate;
-@property (nonatomic, strong) OFDataModel *dataModel;
 
 + (void)description;
 
-- (void)setup;
-- (BOOL)startScanDevice;
-- (BOOL)stopScanDevice;
+- (void)loadDoorListWithPhoneNumber:(NSString *)phoneNumber;
 
 - (void)openSelectedDoor;
 - (void)openDoorWithSelectedRow:(NSInteger)selectedRow;
