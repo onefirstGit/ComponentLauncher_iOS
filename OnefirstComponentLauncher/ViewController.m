@@ -11,6 +11,7 @@
 
 @interface ViewController () <UITextFieldDelegate, OFPickerViewDelegate>
 
+@property (nonatomic, weak) IBOutlet UITextField *baseUrl;
 @property (nonatomic, weak) IBOutlet UITextField *inputPhoneNumber;
 @property (nonatomic, weak) IBOutlet OFPickerView *pickerView;
 
@@ -50,10 +51,11 @@
 #pragma mark - IBAction
 
 - (IBAction)actionScan:(id)sender {
+    NSString *url = self.baseUrl.text;
     NSString *phoneNumber = self.inputPhoneNumber.text;
     
     self.pickerView.pickerViewDelegate = self;
-    [self.pickerView loadDoorListWithPhoneNumber:phoneNumber];
+    [self.pickerView loadDoorListWithBaseUrl:url phoneNumber:phoneNumber];
 }
 
 - (IBAction)actionOpenDoor:(id)sender {

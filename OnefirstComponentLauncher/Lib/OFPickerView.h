@@ -21,7 +21,7 @@
 
 + (void)description;
 
-- (void)loadDoorListWithPhoneNumber:(NSString *)phoneNumber;
+- (void)loadDoorListWithBaseUrl:(NSString *)baseUrl phoneNumber:(NSString *)phoneNumber;
 
 - (void)openSelectedDoor;
 - (void)openDoorWithSelectedRow:(NSInteger)selectedRow;
